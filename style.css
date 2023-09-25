@@ -1,0 +1,57 @@
+:root{
+    --bgheader: #353a40;
+    --blanco : #ffffff;
+    --verde : #96c93e;
+    --footer : #1c3846;
+    --javaScript: #ffc106;
+    --react : #17a2b9;
+    --Startups: #dc3544;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: var(--bgheader);
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    & img{
+        height: 80px;
+    }
+    & h2{
+        color: var(--blanco);
+        height: 4em;
+        padding-top: 30px;
+    }
+}
+
+.nav{
+    & a{
+        padding: 0 8px;
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .comprarT{
+        color: var(--verde);
+    }
+}
+
+main{
+    display: grid;
+    grid-template-rows: repeat(2fr 2);
+}
+
+.conferencia{
+    background-image:url(/img/ba1.jpg);
+}
