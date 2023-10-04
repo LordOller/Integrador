@@ -14,12 +14,17 @@
     box-sizing: border-box;
 }
 
+
+
 header{
     background-color: var(--bgheader);
     height: 80px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .logo{
@@ -48,10 +53,246 @@ header{
 }
 
 main{
-    display: grid;
-    grid-template-rows: repeat(2fr 2);
+    & img{
+        width: 100%;
+    }
+    &.contenedor{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    & section{
+        & img{
+            filter: brightness(0.5);
+        }
+        position: relative;
+        display: inline-block;
+    }
+    & a{
+        text-decoration: none;
+    }
+    
 }
 
+.sobreImagen{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: right;
+    line-height: 25px;
+    position: absolute;
+    top: 40%;
+    left: 70%;
+    color: var(--blanco);
+}
+
+.botones{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.boton{
+    color: var(--blanco);
+    background-color: var(--verde);
+    border-color: var(--verde);
+    padding: 10px;
+    border-radius: 8px;
+}
+.boton-trans{
+    color: var(--blanco);
+    border-color: var(--blanco);
+    padding: 10px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.oradores{
+    font-weight: lighter;
+    text-align: center;
+    font-family: sans-serif;
+    & h2{
+        font-size: 40px;
+        
+        font-weight:bolder;
+        
+    }
+    margin-top: 10px;
+}
+
+.oradores-cadaUno{
+    margin-top: 10px;
+    margin-right: 150px;
+    margin-left: 150px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.contenido-oradores{
+    border: 0.1px solid gray;
+    text-align: left;
+    & p{
+        margin: 20px;
+        line-height: 20px;
+    }
+}
+
+
+
+.titulo{
+    margin: 20px;
+}
+
+.java{
+    border: 1px solid var(--javaScript);
+    border-radius: 5px;
+    color: black;
+    background-color: var(--javaScript);
+    font-weight: bold;
+    padding: 3px;
+}
+
+.react{
+    border: 1px solid var(--react);
+    border-radius: 5px;
+    color: var(--blanco);
+    background-color: var(--react);
+    font-weight: bold;
+    padding: 2px;
+}
+
+.negocios{
+    border: 1px solid var(--bgheader);
+    border-radius: 5px;
+    color: var(--blanco);
+    background-color: var(--bgheader);
+    font-weight: bold;
+    padding: 2px;
+}
+.startups{
+    border: 1px solid var(--Startups);
+    border-radius: 5px;
+    color: var(--blanco);
+    background-color: var(--Startups);
+    font-weight: bold;
+    padding: 2px;
+}
 .conferencia{
     background-image:url(/img/ba1.jpg);
+}
+
+.imagenes{
+    margin-top: 20px;
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2px;
+    color: var(--blanco);  
+    &
+    img{
+        height: 100%;
+    }
+}
+
+.Buenos-Aires{
+    background-color: var(--bgheader); 
+    padding-left: 15px;
+    padding-top: 15px;
+    & p{
+        line-height: 20px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+}
+
+.BuenosAires-Boton{
+    border: 1px solid white;
+    border-radius: 3px;
+    color: white;
+    padding: 5px;
+}
+
+.formulario{
+    margin-top: -78px;
+    text-align: center;
+}
+
+.formulario-p{
+    text-align: center;
+}
+
+.formularioContenido{
+    
+display: grid;
+    
+grid-template-rows: repeat(1,1fr);
+    
+grid-template-columns: repeat(1,1fr);
+    
+align-content: stretch;
+    
+align-items: center;
+    
+justify-items: center;
+}   
+
+form{
+    width: 60%;
+}
+
+.formularioDatos{
+    display: flex;
+    column-gap: 18px;
+    justify-content: center;
+    align-content: stretch;
+    flex-direction: row;
+    margin-bottom: 10px;
+    width: 100%;
+    
+}
+
+input{
+    width: 50%;
+    border-radius: 10px; /* Ajusta el valor según el redondeo deseado */
+    padding: 10px; /* Añade un espacio interno para que el contenido no toque los bordes redondeados */
+    border: 1px solid black ;
+    font-size: 15px;
+}
+
+.botonFormulario{
+    color: var(--blanco);
+    background-color: var(--verde);
+    border: none;
+    border-radius: 4px;
+    padding: 12px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.mensaje{
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    
+}
+
+textarea{
+    border-radius: 10px; /* Ajusta el valor según el redondeo deseado */
+    padding: 10px; /* Añade un espacio interno para que el contenido no toque los bordes redondeados */
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+footer{
+    height: 80px;
+    margin-top: 20px;
+    padding-top: 20px;
+    background-color: var(--footer);
+    display: flex;
+    justify-content: space-around;
+    & a{
+        margin-top: 10px;
+        color: var(--blanco);
+        text-decoration: none;
+    }
 }
