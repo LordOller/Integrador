@@ -14,6 +14,18 @@
     box-sizing: border-box;
 }
 
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body{
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
 
 
 header{
@@ -295,4 +307,127 @@ footer{
         color: var(--blanco);
         text-decoration: none;
     }
+}
+
+.contenedor-tickets{
+    max-width: 80rem;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.oferta{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.tipo{
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 0.1rem solid var(--react);
+    & p,h3{
+        margin-bottom: 1.5rem;
+    }
+}
+
+.tipoDos{
+    margin-top: 2rem;
+    border: 0.1rem solid var(--javaScript);
+    padding: 1rem;
+    & p,h3{
+        margin-bottom: 1.5rem;
+    }
+}
+
+.datos{
+    display: flex;
+    column-gap: 8px;
+    width: 125%;
+    margin-bottom: 10px;
+}
+
+.Correo{
+    width: 120%;
+}
+
+.nombres{
+    display: flex;
+    justify-content: start;
+}
+
+.cantidad{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+
+}
+.categoria{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.formularioCantidad{
+    display: flex;
+    column-gap: 2rem;
+    & input{
+        width: 100%;
+    }
+}
+
+.script{
+    background-color: #17a2b9;
+    text-align: start;
+    margin-left: 9rem;
+    width: 62%;
+    border: solid 1px #17a2b9;
+    border-radius: 0.5rem;
+}
+
+#selector{
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 100%;
+    
+}
+
+p,h2,h3{
+    text-align: center;
+}
+
+.formularioComprar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.boton-comprar{
+    display: flex;
+    justify-content: space-around;
+    column-gap: 2rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+.boton-click{
+    background-color: var(--verde);
+    color: var(--blanco);
+    border: solid 1px var(--verde);
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    padding: 0.5rem 10rem;
+    font-weight: 800;
+}
+
+.boton-click:hover{
+    cursor: pointer;
+}
+
+#Fecha,#Oradores,#Conferencia{
+    color: gray;
 }
